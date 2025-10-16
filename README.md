@@ -52,15 +52,10 @@ During installation, you'll need to configure:
 
 This package supports multiple StarkNet networks:
 
-### Mainnet
-- **Package**: `pathfinder.public.dappnode.eth`
-- **RPC Endpoint**: `http://pathfinder.public.dappnode:9545/`
-- **WebSocket**: `ws://pathfinder.public.dappnode:9546/`
-
-### Sepolia Testnet
-- **Package**: `pathfinder-sepolia.public.dappnode.eth`
-- **RPC Endpoint**: `http://pathfinder-sepolia.public.dappnode:9555/`
-- **WebSocket**: `ws://pathfinder-sepolia.public.dappnode:9556/`
+| Network | Package | RPC Port | WebSocket Port | RPC Endpoint | WebSocket Endpoint |
+|---------|---------|----------|----------------|--------------|-------------------|
+| **Mainnet** | `pathfinder.public.dappnode.eth` | 9545 | 9546 | `http://pathfinder.public.dappnode:9545/` | `ws://pathfinder.public.dappnode:9546/` |
+| **Sepolia** | `pathfinder-sepolia.public.dappnode.eth` | 9555 | 9556 | `http://pathfinder-sepolia.public.dappnode:9555/` | `ws://pathfinder-sepolia.public.dappnode:9556/` |
 
 ## 🔌 API Usage
 
@@ -69,26 +64,30 @@ This package supports multiple StarkNet networks:
 The Pathfinder node exposes a StarkNet JSON-RPC API compatible with the official specification:
 
 ```bash
-# Get the latest block
+# Mainnet - Get the latest block
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","method":"starknet_blockNumber","params":[],"id":1}' \
   http://pathfinder.public.dappnode:9545/
 
-# Get chain ID
+# Sepolia - Get chain ID
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","method":"starknet_chainId","params":[],"id":1}' \
-  http://pathfinder.public.dappnode:9545/
+  http://pathfinder-sepolia.public.dappnode:9555/
 ```
 
 ### WebSocket Interface
 
 ```javascript
-const ws = new WebSocket('ws://pathfinder.public.dappnode:9546/');
+// Mainnet WebSocket
+const wsMainnet = new WebSocket('ws://pathfinder.public.dappnode:9546/');
 
-ws.onopen = function() {
-    ws.send(JSON.stringify({
+// Sepolia WebSocket
+const wsSepolia = new WebSocket('ws://pathfinder-sepolia.public.dappnode:9556/');
+
+wsMainnet.onopen = function() {
+    wsMainnet.send(JSON.stringify({
         jsonrpc: '2.0',
         method: 'starknet_subscribeEvents',
         params: {},
@@ -112,13 +111,13 @@ The package includes a Grafana dashboard for monitoring:
 ### Docker Configuration
 
 - **Base Image**: `eqlabs/pathfinder`
-- **Exposed Ports**: 
-  - `9545`: JSON-RPC API
-  - `9546`: WebSocket API
+- **Exposed Ports**:
+  - **Mainnet**: `9545` (JSON-RPC), `9546` (WebSocket)
+  - **Sepolia**: `9555` (JSON-RPC), `9556` (WebSocket)
 - **Data Persistence**: Node data stored in persistent Docker volume
 - **Environment Variables**:
   - `PATHFINDER_ETHEREUM_API_URL`: L1 Ethereum node URL
-  - `PATHFINDER_NETWORK`: StarkNet network (mainnet/sepolia)
+  - `PATHFINDER_NETWORK`: StarkNet network (mainnet/sepolia-testnet)
   - `RUST_LOG`: Logging level
   - `PATHFINDER_DB_DIR`: Database directory
 
