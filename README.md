@@ -32,12 +32,6 @@ A DAppNode package for running [Pathfinder](https://github.com/eqlabs/pathfinder
 3. Search for "Pathfinder"
 4. Click "Install" and follow the setup wizard
 
-### Via DAppNode SDK
-
-```bash
-npx @dappnode/dappnodesdk install pathfinder.public.dappnode.eth
-```
-
 ## ⚙️ Configuration
 
 During installation, you'll need to configure:
@@ -105,7 +99,7 @@ ws.onopen = function() {
 
 ## 📊 Monitoring
 
-The package includes a Grafana dashboard (`pathfinder-grafana-dashboard.json`) for monitoring:
+The package includes a Grafana dashboard for monitoring:
 
 - Node synchronization status
 - Block height and sync progress
@@ -113,16 +107,11 @@ The package includes a Grafana dashboard (`pathfinder-grafana-dashboard.json`) f
 - Resource usage (CPU, memory, disk)
 - Network connectivity
 
-To use the dashboard:
-1. Import the JSON file into your Grafana instance
-2. Configure Prometheus to scrape metrics from Pathfinder
-3. View real-time metrics and alerts
-
 ## 🐳 Technical Details
 
 ### Docker Configuration
 
-- **Base Image**: `eqlabs/pathfinder:v0.20.5`
+- **Base Image**: `eqlabs/pathfinder`
 - **Exposed Ports**: 
   - `9545`: JSON-RPC API
   - `9546`: WebSocket API
