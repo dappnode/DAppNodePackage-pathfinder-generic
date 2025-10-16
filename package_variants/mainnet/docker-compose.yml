@@ -1,0 +1,18 @@
+version: "3.5"
+services:
+  pathfinder:
+    image: pathfinder.pathfinder-sepolia.public.dappnode.eth:0.1.0
+    build:
+      args:
+        NETWORK: sepolia-testnet
+    environment:
+      PATHFINDER_ETHEREUM_API_URL: ws://execution.mainnet.dncore.dappnode:8555
+      PATHFINDER_NETWORK: mainnet
+      RUST_LOG: info
+      PATHFINDER_HTTP_RPC_ADDRESS: 0.0.0.0:9545
+      PATHFINDER_WS_RPC_ADDRESS: 0.0.0.0:9546
+      PATHFINDER_MONITOR_ADDRESS: 0.0.0.0:9547
+    ports:
+      - "9545:9545"
+      - "9546:9546"
+      - "9547:9547"

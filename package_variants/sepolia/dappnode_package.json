@@ -9,7 +9,12 @@
     {
       "name": "Pathfinder Sepolia RPC",
       "description": "JSON RPC endpoint for Pathfinder Sepolia",
-      "port": 9545
+      "port": 9555
+    },
+    {
+      "name": "Pathfinder Sepolia WebSocket",
+      "description": "WebSocket RPC endpoint for StarkNet Sepolia",
+      "port": 9556
     }
   ]
 }

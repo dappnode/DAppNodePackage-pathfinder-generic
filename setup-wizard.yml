@@ -8,19 +8,15 @@ fields:
       service: pathfinder
     title: Ethereum API URL
     description: >-
-      **Required**: URL of your Ethereum Sepolia node for L1 state verification.
+      **Required**: URL of your Ethereum node for L1 state verification.
 
 
       **Examples:**
 
-      - `ws://execution.sepolia.dncore.dappnode:8555` (DappNode Sepolia execution client)
+      - `ws://execution.{network}.dncore.dappnode:8555` (DappNode execution client)
 
       - `wss://sepolia.infura.io/ws/v3/YOUR-PROJECT-ID` (Infura WebSocket)
 
-      - `https://sepolia.infura.io/v3/YOUR-PROJECT-ID` (Infura HTTP)
-
-
-      **Note:** WebSocket (ws:// or wss://) URLs are recommended for better performance.
     required: true
     pattern: "^(https?|wss?)://.*"
     patternErrorMessage: Must be a valid HTTP or WebSocket URL (http://, https://, ws://, or wss://)
