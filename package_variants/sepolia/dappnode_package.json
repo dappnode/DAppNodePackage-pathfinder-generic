@@ -1,6 +1,6 @@
 {
   "name": "pathfinder-sepolia.public.dappnode.eth",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "shortDescription": "Pathfinder - StarkNet full node in Sepolia",
   "links": {
     "api": "http://pathfinder-sepolia.public.dappnode:9545/"

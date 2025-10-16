@@ -4,7 +4,7 @@ services:
     build:
       context: pathfinder
       args:
-        UPSTREAM_VERSION: v0.20.4
+        UPSTREAM_VERSION: v0.20.5
     restart: unless-stopped
     environment:
       PATHFINDER_ETHEREUM_API_URL: ""

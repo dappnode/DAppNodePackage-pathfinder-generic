@@ -1,6 +1,6 @@
 {
   "name": "pathfinder.public.dappnode.eth",
-  "version": "0.1.0",
+  "version": "0.4.1",
   "shortDescription": "Pathfinder - StarkNet full node in Mainnet",
   "links": {
     "api": "http://pathfinder.public.dappnode:9545/"
