@@ -1,0 +1,11 @@
+[
+    {
+        "labels": {
+            "package": "pathfinder-sepolia.public.dappnode.eth",
+            "service": "pathfinder"
+        },
+        "targets": [
+            "pathfinder-sepolia.public.dappnode:9557"
+        ]
+    }
+]

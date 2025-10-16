@@ -1,6 +1,20 @@
-version: "3.5"
+version: "3.8"
 services:
   pathfinder:
     build:
-      context: .
+      context: pathfinder
+      args:
+        UPSTREAM_VERSION: v0.20.4
     restart: unless-stopped
+    environment:
+      PATHFINDER_ETHEREUM_API_URL: ""
+      PATHFINDER_NETWORK: mainnet
+      RUST_LOG: info
+      PATHFINDER_DB_DIR: /usr/share/pathfinder/data
+    volumes:
+      - pathfinder-data:/usr/share/pathfinder/data
+    ports:
+      - "9545:9545"
+      - "9546:9546"
+volumes:
+  pathfinder-data: {}

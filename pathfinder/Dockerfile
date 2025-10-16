@@ -1,7 +1,3 @@
-FROM busybox
-  
-  WORKDIR /usr/src/app
-  
-  ENTRYPOINT while true; do echo "happy build $USERNAME!"; sleep 1; done
-  
-  
+# syntax=docker/dockerfile:1
+ARG UPSTREAM_VERSION
+FROM eqlabs/pathfinder:${UPSTREAM_VERSION}

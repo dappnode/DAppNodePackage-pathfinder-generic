@@ -1,4 +1,15 @@
 {
   "name": "pathfinder-sepolia.public.dappnode.eth",
-  "version": "0.1.0"
+  "version": "0.1.2",
+  "shortDescription": "Pathfinder - StarkNet full node in Sepolia",
+  "links": {
+    "api": "http://pathfinder-sepolia.public.dappnode:9545/"
+  },
+  "exposable": [
+    {
+      "name": "Pathfinder Sepolia RPC",
+      "description": "JSON RPC endpoint for Pathfinder Sepolia",
+      "port": 9545
+    }
+  ]
 }
