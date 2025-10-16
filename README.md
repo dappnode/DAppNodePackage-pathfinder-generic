@@ -52,10 +52,12 @@ During installation, you'll need to configure:
 
 This package supports multiple StarkNet networks:
 
-| Network | Package | RPC Port | WebSocket Port | RPC Endpoint | WebSocket Endpoint |
-|---------|---------|----------|----------------|--------------|-------------------|
-| **Mainnet** | `pathfinder.public.dappnode.eth` | 9545 | 9546 | `http://pathfinder.public.dappnode:9545/` | `ws://pathfinder.public.dappnode:9546/` |
-| **Sepolia** | `pathfinder-sepolia.public.dappnode.eth` | 9555 | 9556 | `http://pathfinder-sepolia.public.dappnode:9555/` | `ws://pathfinder-sepolia.public.dappnode:9556/` |
+| Network | Package | RPC Port | WebSocket Port | Monitor Port | RPC Endpoint | WebSocket Endpoint |
+|---------|---------|----------|----------------|--------------|--------------|-------------------|
+| **Mainnet** | `pathfinder.public.dappnode.eth` | 9545 | 9546 | 9547 | `http://pathfinder.public.dappnode:9545/` | `ws://pathfinder.public.dappnode:9546/` |
+| **Sepolia** | `pathfinder-sepolia.public.dappnode.eth` | 9555 | 9556 | 9557 | `http://pathfinder-sepolia.public.dappnode:9555/` | `ws://pathfinder-sepolia.public.dappnode:9556/` |
+
+> **Note**: The Monitor port is used for metrics and health check endpoints for monitoring and observability.
 
 ## 🔌 API Usage
 
@@ -112,8 +114,8 @@ The package includes a Grafana dashboard for monitoring:
 
 - **Base Image**: `eqlabs/pathfinder`
 - **Exposed Ports**:
-  - **Mainnet**: `9545` (JSON-RPC), `9546` (WebSocket)
-  - **Sepolia**: `9555` (JSON-RPC), `9556` (WebSocket)
+  - **Mainnet**: `9545` (JSON-RPC), `9546` (WebSocket), `9547` (Monitor)
+  - **Sepolia**: `9555` (JSON-RPC), `9556` (WebSocket), `9557` (Monitor)
 - **Data Persistence**: Node data stored in persistent Docker volume
 - **Environment Variables**:
   - `PATHFINDER_ETHEREUM_API_URL`: L1 Ethereum node URL
