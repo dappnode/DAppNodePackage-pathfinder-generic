@@ -11,10 +11,10 @@ services:
       PATHFINDER_NETWORK: mainnet
       RUST_LOG: info
       PATHFINDER_DB_DIR: /usr/share/pathfinder/data
+      PATHFINDER_WEBSOCKET_ENABLED: "true"
     volumes:
       - pathfinder-data:/usr/share/pathfinder/data
     ports:
       - "9545:9545"
-      - "9546:9546"
 volumes:
   pathfinder-data: {}

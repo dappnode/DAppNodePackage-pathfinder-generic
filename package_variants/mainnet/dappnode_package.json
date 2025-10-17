@@ -3,18 +3,14 @@
   "version": "0.1.0",
   "shortDescription": "Pathfinder - StarkNet full node in Mainnet",
   "links": {
-    "api": "http://pathfinder.public.dappnode:9545/"
+    "RPC": "http://pathfinder.public.dappnode:9555/",
+    "WS": "ws://pathfinder.public.dappnode:9555/ws"
   },
   "exposable": [
     {
       "name": "Pathfinder RPC",
       "description": "JSON RPC endpoint for Pathfinder",
-      "port": 9545
-    },
-    {
-      "name": "Pathfinder WebSocket",
-      "description": "WebSocket RPC endpoint for Pathfinder",
-      "port": 9546
+      "port": 9555
     }
   ]
 }
