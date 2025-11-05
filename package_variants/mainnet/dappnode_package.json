@@ -1,10 +1,10 @@
 {
-  "name": "pathfinder.public.dappnode.eth",
+  "name": "pathfinder.dnp.dappnode.eth",
   "version": "0.1.0",
   "shortDescription": "Pathfinder - StarkNet full node in Mainnet",
   "links": {
-    "RPC": "http://pathfinder.public.dappnode:9555/",
-    "WS": "ws://pathfinder.public.dappnode:9555/ws"
+    "RPC": "http://pathfinder.dappnode:9555/",
+    "WS": "ws://pathfinder.dappnode:9555/ws"
   },
   "exposable": [
     {

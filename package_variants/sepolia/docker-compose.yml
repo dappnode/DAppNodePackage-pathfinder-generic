@@ -1,7 +1,7 @@
 version: "3.5"
 services:
   pathfinder:
-    image: pathfinder.pathfinder-sepolia.public.dappnode.eth:0.1.0
+    image: pathfinder.pathfinder-sepolia.dappnode.eth:0.1.0
     build:
       args:
         NETWORK: sepolia-testnet
