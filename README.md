@@ -54,8 +54,8 @@ This package supports multiple StarkNet networks:
 
 | Network | Package | RPC Port | Monitor Port | RPC Endpoint | WebSocket Endpoint |
 |---------|---------|----------|----------------|--------------|--------------|-------------------|
-| **Mainnet** | `pathfinder.public.dappnode.eth` | 9545 | 9547 | `http://pathfinder.public.dappnode:9545/` | `ws://pathfinder.public.dappnode:9545/ws` |
-| **Sepolia** | `pathfinder-sepolia.public.dappnode.eth` | 9555 | 9557 | `http://pathfinder-sepolia.public.dappnode:9555/` | `ws://pathfinder-sepolia.public.dappnode:9555/ws` |
+| **Mainnet** | `pathfinder.dnp.dappnode.eth` | 9545 | 9547 | `http://pathfinder.dappnode:9545/` | `ws://pathfinder.dappnode:9545/ws` |
+| **Sepolia** | `pathfinder-sepolia.dappnode.eth` | 9555 | 9557 | `http://pathfinder-sepolia.dappnode:9555/` | `ws://pathfinder-sepolia.dappnode:9555/ws` |
 
 > **Note**: The Monitor port is used for metrics and health check endpoints for monitoring and observability.
 
@@ -70,23 +70,23 @@ The Pathfinder node exposes a StarkNet JSON-RPC API compatible with the official
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","method":"starknet_blockNumber","params":[],"id":1}' \
-  http://pathfinder.public.dappnode:9545/
+  http://pathfinder.dappnode:9545/
 
 # Sepolia - Get chain ID
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","method":"starknet_chainId","params":[],"id":1}' \
-  http://pathfinder-sepolia.public.dappnode:9555/
+  http://pathfinder-sepolia.dappnode:9555/
 ```
 
 ### WebSocket Interface
 
 ```javascript
 // Mainnet WebSocket
-const wsMainnet = new WebSocket('ws://pathfinder.public.dappnode:9545/ws');
+const wsMainnet = new WebSocket('ws://pathfinder.dappnode:9545/ws');
 
 // Sepolia WebSocket
-const wsSepolia = new WebSocket('ws://pathfinder-sepolia.public.dappnode:9555/ws');
+const wsSepolia = new WebSocket('ws://pathfinder-sepolia.dappnode:9555/ws');
 
 wsMainnet.onopen = function() {
     wsMainnet.send(JSON.stringify({
