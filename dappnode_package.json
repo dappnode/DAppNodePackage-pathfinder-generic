@@ -4,19 +4,11 @@
   "description": "Pathfinder - Starknet Node Client",
   "type": "service",
   "author": "DAppNode Association (https://github.com/dappnode)",
-  "categories": [
-    "Developer tools",
-    "Blockchain"
-  ],
-  "keywords": [
-    "starknet"
-  ],
-  "architectures": [
-    "linux/amd64",
-    "linux/arm64"
-  ],
+  "categories": ["Developer tools", "Blockchain"],
+  "keywords": ["starknet"],
+  "architectures": ["linux/amd64", "linux/arm64"],
   "upstreamArg": "UPSTREAM_VERSION",
-  "upstreamVersion": "v0.20.5",
+  "upstreamVersion": "v0.21.0",
   "upstreamRepo": "eqlabs/pathfinder",
   "links": {
     "homepage": "https://github.com/dappnode/DAppNodePackage-pathfinder-generic",
