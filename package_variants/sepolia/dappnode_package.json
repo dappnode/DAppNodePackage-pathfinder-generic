@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "shortDescription": "Pathfinder - StarkNet full node in Sepolia",
   "links": {
-    "api": "http://pathfinder-sepolia.dappnode:9545/"
-    "ws": "ws://pathfinder-sepolia.dappnode:9545/ws"
+    "RPC": "http://pathfinder-sepolia.dappnode:9545/"
+    "WS": "ws://pathfinder-sepolia.dappnode:9545/ws"
   },
   "exposable": [
     {
