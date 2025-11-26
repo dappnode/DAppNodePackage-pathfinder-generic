@@ -51,11 +51,11 @@ During installation, you'll need to configure:
 ## 🌐 Network Variants
 
 This package supports multiple StarkNet networks:
+| Network   | Package                            | RPC Port | Monitor Port | RPC Endpoint                               | WebSocket Endpoint                                 |
+|-----------|-------------------------------------|----------|--------------|---------------------------------------------|-----------------------------------------------------|
+| **Mainnet** | `pathfinder.dnp.dappnode.eth`        | 9545     | 9547         | http://pathfinder.dappnode:9545/            | ws://pathfinder.dappnode:9546/ws                    |
+| **Sepolia** | `pathfinder-sepolia.dappnode.eth`    | 9555     | 9557         | http://pathfinder-sepolia.dappnode:9555/    | ws://pathfinder-sepolia.dappnode:9556/ws            |
 
-| Network | Package | RPC Port | Monitor Port | RPC Endpoint | WebSocket Endpoint |
-|---------|---------|----------|----------------|--------------|--------------|-------------------|
-| **Mainnet** | `pathfinder.dnp.dappnode.eth` | 9545 | 9547 | `http://pathfinder.dappnode:9545/` | `ws://pathfinder.dappnode:9545/ws` |
-| **Sepolia** | `pathfinder-sepolia.dappnode.eth` | 9555 | 9557 | `http://pathfinder-sepolia.dappnode:9555/` | `ws://pathfinder-sepolia.dappnode:9555/ws` |
 
 > **Note**: The Monitor port is used for metrics and health check endpoints for monitoring and observability.
 
@@ -83,10 +83,10 @@ curl -X POST \
 
 ```javascript
 // Mainnet WebSocket
-const wsMainnet = new WebSocket('ws://pathfinder.dappnode:9545/ws');
+const wsMainnet = new WebSocket('ws://pathfinder.dappnode:9546/ws');
 
 // Sepolia WebSocket
-const wsSepolia = new WebSocket('ws://pathfinder-sepolia.dappnode:9555/ws');
+const wsSepolia = new WebSocket('ws://pathfinder-sepolia.dappnode:9556/ws');
 
 wsMainnet.onopen = function() {
     wsMainnet.send(JSON.stringify({
