@@ -79,25 +79,6 @@ curl -X POST \
   http://pathfinder-sepolia.dappnode:9555/
 ```
 
-### WebSocket Interface
-
-```javascript
-// Mainnet WebSocket
-const wsMainnet = new WebSocket('ws://pathfinder.dappnode:9546/ws');
-
-// Sepolia WebSocket
-const wsSepolia = new WebSocket('ws://pathfinder-sepolia.dappnode:9556/ws');
-
-wsMainnet.onopen = function() {
-    wsMainnet.send(JSON.stringify({
-        jsonrpc: '2.0',
-        method: 'starknet_subscribeEvents',
-        params: {},
-        id: 1
-    }));
-};
-```
-
 ## 📊 Monitoring
 
 The package includes a Grafana dashboard for monitoring:
