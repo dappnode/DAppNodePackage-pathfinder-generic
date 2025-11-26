@@ -4,6 +4,7 @@
   "shortDescription": "Pathfinder - StarkNet full node in Sepolia",
   "links": {
     "api": "http://pathfinder-sepolia.dappnode:9545/"
+    "ws": "ws://pathfinder-sepolia.dappnode:9545/ws"
   },
   "exposable": [
     {
