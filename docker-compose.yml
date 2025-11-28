@@ -12,9 +12,10 @@ services:
       RUST_LOG: info
       PATHFINDER_DB_DIR: /usr/share/pathfinder/data
       PATHFINDER_WEBSOCKET_ENABLED: "true"
+      PATHFINDER_HTTP_RPC_ADDRESS: 0.0.0.0:9545
+      PATHFINDER_WS_RPC_ADDRESS: 0.0.0.0:9546
+      PATHFINDER_MONITOR_ADDRESS: 0.0.0.0:9547
     volumes:
       - pathfinder-data:/usr/share/pathfinder/data
-    ports:
-      - "9545:9545"
 volumes:
   pathfinder-data: {}

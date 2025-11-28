@@ -7,11 +7,3 @@ services:
     environment:
       PATHFINDER_ETHEREUM_API_URL: ws://execution.sepolia.dncore.dappnode:8546
       PATHFINDER_NETWORK: sepolia-testnet
-      RUST_LOG: info
-      PATHFINDER_HTTP_RPC_ADDRESS: 0.0.0.0:9555
-      PATHFINDER_WS_RPC_ADDRESS: 0.0.0.0:9556
-      PATHFINDER_MONITOR_ADDRESS: 0.0.0.0:9557
-    ports:
-      - "9555:9555"
-      - "9556:9556"
-      - "9557:9557"

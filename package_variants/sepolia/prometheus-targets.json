@@ -5,7 +5,7 @@
             "service": "pathfinder"
         },
         "targets": [
-            "pathfinder-sepolia.dappnode:9557"
+            "pathfinder-sepolia.dappnode:9547"
         ]
     }
 ]
