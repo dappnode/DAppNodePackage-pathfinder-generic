@@ -13,7 +13,7 @@ fields:
 
       **Examples:**
 
-      - `ws://execution.{network}.dncore.dappnode:8555` (DappNode execution client)
+      - `ws://execution.{network}.dncore.dappnode:8546` (DappNode execution client)
 
       - `wss://sepolia.infura.io/ws/v3/YOUR-PROJECT-ID` (Infura WebSocket)
 
