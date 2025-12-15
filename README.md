@@ -13,7 +13,6 @@ A DAppNode package for running [Pathfinder](https://github.com/eqlabs/pathfinder
 - **JSON-RPC API**: Access StarkNet through standard JSON-RPC endpoints
 - **WebSocket Support**: Real-time data access via WebSocket connections
 - **Easy Configuration**: Simple setup wizard for network configuration
-- **Grafana Dashboard**: Built-in monitoring dashboard for node metrics
 - **Multi-Architecture**: Supports both AMD64 and ARM64 architectures
 
 ## 📋 Prerequisites
@@ -51,11 +50,11 @@ During installation, you'll need to configure:
 ## 🌐 Network Variants
 
 This package supports multiple StarkNet networks:
+
 | Network   | Package                            | RPC Port | Monitor Port | RPC Endpoint                               | WebSocket Endpoint                                 |
 |-----------|-------------------------------------|----------|--------------|---------------------------------------------|-----------------------------------------------------|
-| **Mainnet** | `pathfinder.dnp.dappnode.eth`        | 9545     | 9547         | http://pathfinder.dappnode:9545/            | ws://pathfinder.dappnode:9546/ws                    |
-| **Sepolia** | `pathfinder-sepolia.dappnode.eth`    | 9555     | 9557         | http://pathfinder-sepolia.dappnode:9555/    | ws://pathfinder-sepolia.dappnode:9556/ws            |
-
+| **Mainnet** | `pathfinder.dnp.dappnode.eth`        | 6060     | 9547         | <http://pathfinder.dappnode:6060/>            | ws://pathfinder.dappnode:6061/                    |
+| **Sepolia** | `pathfinder-sepolia.dappnode.eth`    | 6060     | 9547         | <http://pathfinder-sepolia.dappnode:6060/>    | ws://pathfinder-sepolia.dappnode:6061/            |
 
 > **Note**: The Monitor port is used for metrics and health check endpoints for monitoring and observability.
 
@@ -70,33 +69,20 @@ The Pathfinder node exposes a StarkNet JSON-RPC API compatible with the official
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","method":"starknet_blockNumber","params":[],"id":1}' \
-  http://pathfinder.dappnode:9545/
+  http://pathfinder.dappnode:6060/
 
 # Sepolia - Get chain ID
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","method":"starknet_chainId","params":[],"id":1}' \
-  http://pathfinder-sepolia.dappnode:9555/
+  http://pathfinder-sepolia.dappnode:6060/
 ```
-
-## 📊 Monitoring
-
-The package includes a Grafana dashboard for monitoring:
-
-- Node synchronization status
-- Block height and sync progress
-- RPC call metrics
-- Resource usage (CPU, memory, disk)
-- Network connectivity
 
 ## 🐳 Technical Details
 
 ### Docker Configuration
 
 - **Base Image**: `eqlabs/pathfinder`
-- **Exposed Ports**:
-  - **Mainnet**: `9545` (JSON-RPC), `9547` (Monitor)
-  - **Sepolia**: `9555` (JSON-RPC), `9557` (Monitor)
 - **Data Persistence**: Node data stored in persistent Docker volume
 - **Environment Variables**:
   - `PATHFINDER_ETHEREUM_API_URL`: L1 Ethereum node URL
@@ -132,6 +118,7 @@ The package includes a Grafana dashboard for monitoring:
 ### Logs Access
 
 View logs through the DAppNode interface:
+
 1. Go to Packages → Pathfinder
 2. Click on "Logs" tab
 3. Adjust log level in configuration if needed
@@ -173,6 +160,6 @@ This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) 
 
 ---
 
-**Made with ❤️ by the DAppNode community**
+**Made with ❤️ by the DAppNode Association**
 
-For support, join our [Discord](https://discord.gg/dappnode) or visit our [forum](https://discourse.dappnode.io/).
+For support, join our [Discord](https://discord.gg/dappnode).
