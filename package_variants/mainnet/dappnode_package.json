@@ -1,6 +1,6 @@
 {
   "name": "pathfinder.dnp.dappnode.eth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "shortDescription": "Pathfinder - StarkNet full node in Mainnet",
   "links": {
     "RPC": "http://pathfinder.dappnode:9555/",
