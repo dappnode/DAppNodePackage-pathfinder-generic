@@ -4,18 +4,18 @@
   "shortDescription": "Pathfinder - StarkNet full node in Sepolia",
   "links": {
     "RPC": "http://pathfinder-sepolia.dappnode:6060/",
-    "WS": "ws://pathfinder-sepolia.dappnode:6060/ws"
+    "WS": "ws://pathfinder-sepolia.dappnode:6061/"
   },
   "exposable": [
     {
       "name": "Pathfinder Sepolia RPC",
       "description": "JSON RPC endpoint for Pathfinder Sepolia",
-      "port": 9555
+      "port": 6060
     },
     {
       "name": "Pathfinder Sepolia WebSocket",
       "description": "WebSocket RPC endpoint for StarkNet Sepolia",
-      "port": 9556
+      "port": 6061
     }
   ]
 }
