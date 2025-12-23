@@ -5,5 +5,5 @@ services:
       args:
         NETWORK: mainnet
     environment:
-      PATHFINDER_ETHEREUM_API_URL: ws://execution.mainnet.dncore.dappnode:8546
+      PATHFINDER_ETHEREUM_API_URL: ws://execution.mainnet.staker.dappnode:8546
       PATHFINDER_NETWORK: mainnet
