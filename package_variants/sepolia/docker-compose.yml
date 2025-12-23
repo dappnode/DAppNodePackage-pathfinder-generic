@@ -5,5 +5,5 @@ services:
       args:
         NETWORK: sepolia-testnet
     environment:
-      PATHFINDER_ETHEREUM_API_URL: ws://execution.sepolia.dncore.dappnode:8546
+      PATHFINDER_ETHEREUM_API_URL: ws://execution.sepolia.staker.dappnode:8546
       PATHFINDER_NETWORK: sepolia-testnet
