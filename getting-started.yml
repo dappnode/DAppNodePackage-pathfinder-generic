@@ -30,7 +30,7 @@ This package supports multiple StarkNet networks:
 | Network | Package | RPC Port | Monitor Port | RPC Endpoint | WebSocket Endpoint |
 |---------|---------|----------|----------------|--------------|--------------|-------------------|
 | **Mainnet** | `pathfinder.dnp.dappnode.eth` | 6060 | 9547 | `http://pathfinder.dappnode:6060/` | `ws://pathfinder.dappnode:6061/` |
-| **Sepolia** | `pathfinder-sepolia.dappnode.eth` | 6060 | 9547 | `http://pathfinder-sepolia.dappnode:6060/` | `ws://pathfinder-sepolia.dappnode:6061/` |
+| **Sepolia** | `pathfinder-sepolia.dnp.dappnode.eth` | 6060 | 9547 | `http://pathfinder-sepolia.dappnode:6060/` | `ws://pathfinder-sepolia.dappnode:6061/` |
 
 > **Note**: The Monitor port is used for metrics and health check endpoints for monitoring and observability.
 
