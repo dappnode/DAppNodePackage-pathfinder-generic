@@ -1,7 +1,7 @@
 [
     {
         "labels": {
-            "package": "pathfinder-sepolia.dappnode.eth",
+            "package": "pathfinder-sepolia.dnp.dappnode.eth",
             "service": "pathfinder"
         },
         "targets": [

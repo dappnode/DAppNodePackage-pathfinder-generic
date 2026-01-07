@@ -1,5 +1,5 @@
 {
-  "name": "pathfinder-sepolia.dappnode.eth",
+  "name": "pathfinder-sepolia.dnp.dappnode.eth",
   "version": "0.1.0",
   "shortDescription": "Pathfinder - StarkNet full node in Sepolia",
   "links": {
