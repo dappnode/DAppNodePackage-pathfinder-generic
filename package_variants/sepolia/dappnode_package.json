@@ -1,6 +1,6 @@
 {
   "name": "pathfinder-sepolia.dnp.dappnode.eth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "shortDescription": "Pathfinder - StarkNet full node in Sepolia",
   "links": {
     "RPC": "http://pathfinder-sepolia.dappnode:6060/",
