@@ -1,22 +1,30 @@
 {
-  "name": "pathfinder.dnp.dappnode.eth",
-  "shortDescription": "Pathfinder Starknet full node",
-  "description": "Pathfinder - Starknet Node Client",
-  "type": "service",
+  "architectures": [
+    "linux/amd64",
+    "linux/arm64"
+  ],
   "author": "DAppNode Association (https://github.com/dappnode)",
-  "categories": ["Developer tools", "Blockchain"],
-  "keywords": ["starknet"],
-  "architectures": ["linux/amd64", "linux/arm64"],
-  "upstreamArg": "UPSTREAM_VERSION",
-  "upstreamVersion": "v0.22.3",
-  "upstreamRepo": "eqlabs/pathfinder",
+  "categories": [
+    "Developer tools",
+    "Blockchain"
+  ],
+  "description": "Pathfinder - Starknet Node Client",
+  "keywords": [
+    "starknet"
+  ],
+  "license": "GPL-3.0",
   "links": {
-    "homepage": "https://github.com/dappnode/DAppNodePackage-pathfinder-generic",
-    "api": "http://pathfinder.dappnode:6060/"
+    "api": "http://pathfinder.dappnode:6060/",
+    "homepage": "https://github.com/dappnode/DAppNodePackage-pathfinder-generic"
   },
+  "name": "pathfinder.dnp.dappnode.eth",
   "repository": {
     "type": "git",
     "url": "https://github.com/dappnode/DAppNodePackage-pathfinder-generic"
   },
-  "license": "GPL-3.0"
+  "shortDescription": "Pathfinder Starknet full node",
+  "type": "service",
+  "upstreamArg": "UPSTREAM_VERSION",
+  "upstreamRepo": "eqlabs/pathfinder",
+  "upstreamVersion": "v0.22.6"
 }
