@@ -7,9 +7,13 @@
   "categories": ["Developer tools", "Blockchain"],
   "keywords": ["starknet"],
   "architectures": ["linux/amd64", "linux/arm64"],
-  "upstreamArg": "UPSTREAM_VERSION",
-  "upstreamVersion": "v0.22.3",
-  "upstreamRepo": "eqlabs/pathfinder",
+  "upstream": [
+    {
+      "repo": "eqlabs/pathfinder",
+      "version": "v0.22.3",
+      "arg": "UPSTREAM_VERSION"
+    }
+  ],
   "links": {
     "homepage": "https://github.com/dappnode/DAppNodePackage-pathfinder-generic",
     "api": "http://pathfinder.dappnode:6060/"
