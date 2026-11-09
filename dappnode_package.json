@@ -1,5 +1,4 @@
 {
-  "name": "pathfinder.dnp.dappnode.eth",
   "shortDescription": "Pathfinder Starknet full node",
   "description": "Pathfinder - Starknet Node Client",
   "type": "service",
